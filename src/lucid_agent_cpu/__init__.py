@@ -1,3 +1,3 @@
-from .component import CpuMonitorComponent
+from .component import CpuComponent
 
-__all__ = ["CpuMonitorComponent"]
+__all__ = ["CpuComponent"]

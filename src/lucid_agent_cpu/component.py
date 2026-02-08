@@ -9,8 +9,8 @@ import psutil
 from lucid_agent_core.components.base import Component
 
 
-class CpuMonitorComponent(Component):
-    component_id = "cpu_monitor"
+class CpuComponent(Component):
+    component_id = "cpu"
     _PUBLISH_INTERVAL_SECONDS = 5.0
 
     def __init__(self, context):
@@ -32,7 +32,7 @@ class CpuMonitorComponent(Component):
         self._stop_event.clear()
         self._thread = threading.Thread(
             target=self._run_loop,
-            name="CpuMonitorComponentLoop",
+            name="CpuComponentLoop",
             daemon=True,
         )
         self._thread.start()
